@@ -16,7 +16,7 @@ public class GameService {
 
     public List<GameMinDTO> findAll(){
         List<Game> result = gameRepository.findAll();
-        //Tranforma o objeto Game para GameMinDto
+        //Tranforma o objeto Game para GameMinDto - help
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
 }

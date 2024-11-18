@@ -1,5 +1,6 @@
 package com.projetoJava.dlist.services;
 
+import com.projetoJava.dlist.GameMinProjection;
 import com.projetoJava.dlist.dto.GameDTO;
 import com.projetoJava.dlist.dto.GameMinDTO;
 import com.projetoJava.dlist.entities.Game;
@@ -29,4 +30,12 @@ public class GameService {
         //Tranforma o objeto Game para GameMinDto - help
         return result.stream().map(x -> new GameMinDTO(x)).toList();
     }
+
+    @Transactional(readOnly = true)
+    public List<GameMinDTO> findByList(Long listId){
+        List<GameMinProjection> result = gameRepository.searchByList(listId);
+        //Tranforma o objeto Game para GameMinDto - help
+        return result.stream().map(x -> new GameMinDTO(x)).toList();
+    }
+
 }

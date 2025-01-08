@@ -6,6 +6,7 @@ import org.springframework.beans.BeanUtils;
 
 public class GameDTO {
 
+
     private Long id;
     private String title;
     private Integer year;

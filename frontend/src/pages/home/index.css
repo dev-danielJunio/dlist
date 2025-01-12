@@ -1,0 +1,120 @@
+/* Estilização principal para a página Home */
+.home-container {
+  padding: 20px 200px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.game-list {
+  display: flex; /* Organiza os cartões em uma coluna */
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os itens */
+  margin-top: 20px;
+}
+
+/* Estilização dos cartões de jogos */
+.game-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  max-width: 900px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 15px;
+  /* transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+}
+
+.game-card:active {
+  opacity: 0.9;
+}
+
+/* Estilização da imagem no cartão */
+.game-image {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* Informações dentro do cartão */
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* Link para detalhes do jogo */
+.details-link {
+  margin-top: auto;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Estilo para o contêiner ao soltar o item */
+.game-card-over {
+  background-color: #f0f0f0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  cursor: default;
+}
+

@@ -4,6 +4,7 @@ import Home from './pages/home';
 import GameDetails from './pages/home/gameDetail';
 import '../src/index.css'
 
+
 export default function App() {
   return(
     <BrowserRouter>

@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/lists")
+@CrossOrigin(origins = "http://localhost:5173")
 public class GameListController {
 
     @Autowired
